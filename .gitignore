@@ -1,0 +1,61 @@
+# IDEs & Editors
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node modules
+node_modules/
+jspm_packages/
+.npm
+.yarn
+
+# Astro
+.astro/
+dist/
+
+# Build and Temp folders
+build/
+out/
+.next/
+.cache/
+.vuepress/dist
+.serverless/
+.nyc_output/
+coverage/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.production
+.env.development
+
+# Typescript
+*.tsbuildinfo
+
+# Misc
+.vercel/
+.netlify/

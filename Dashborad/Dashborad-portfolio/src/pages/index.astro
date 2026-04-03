@@ -1,0 +1,19 @@
+---
+// src/pages/index.astro
+import DashboardLayout from '../layouts/DashboardLayout.astro';
+import ProfileHeader from '../components/ProfileHeader.astro';
+import AboutCard from '../components/AboutCard.astro';
+import StatsCard from '../components/StatsCard.astro';
+---
+
+<DashboardLayout>
+	
+	<ProfileHeader />
+
+	<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+		<AboutCard />
+		
+		<StatsCard />
+	</section>
+
+</DashboardLayout>

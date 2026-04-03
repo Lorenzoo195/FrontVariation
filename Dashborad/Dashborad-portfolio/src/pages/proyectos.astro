@@ -1,0 +1,51 @@
+---
+// src/pages/proyectos.astro
+import DashboardLayout from '../layouts/DashboardLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+// Array de datos simulando información. ¡Fundamental para preparar el salto a React!
+const proyectos = [
+	{
+		title: 'E-commerce Deportivo',
+		description: 'Tienda online completa con carrito de compras y pasarela de pago simulada. Estilo Neumorfismo.',
+		tech: ['React', 'Tailwind', 'Zustand'],
+		link: '#'
+	},
+	{
+		title: 'Clon de Spotify',
+		description: 'Interfaz gráfica que replica el reproductor web de Spotify con animaciones fluidas.',
+		tech: ['Astro', 'CSS Vanilla'],
+		link: '#'
+	},
+	{
+		title: 'Dashboard Analítico',
+		description: 'Boceto de panel de control para administrar usuarios y gráficas visuales.',
+		tech: ['React', 'Chart.js', 'Tailwind'],
+		link: '#'
+	},
+	{
+		title: 'App de Tareas (To-Do)',
+		description: 'Clásica aplicación de tareas con persistencia en LocalStorage usando IndexedDB.',
+		tech: ['JavaScript', 'HTML', 'CSS'],
+		link: '#'
+	}
+];
+---
+
+<DashboardLayout>
+	<header class="mb-12 animate-fade-in-up">
+		<h2 class="text-4xl font-bold mb-2 bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Mis Proyectos</h2>
+		<p class="text-zinc-400 text-lg">Una colección de mi trabajo y experimentos descubriendo el Frontend.</p>
+	</header>
+
+	<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in-up" style="animation-delay: 100ms;">
+		{proyectos.map((proyecto) => (
+			<ProjectCard 
+				title={proyecto.title}
+				description={proyecto.description}
+				tech={proyecto.tech}
+				link={proyecto.link}
+			/>
+		))}
+	</section>
+</DashboardLayout>
